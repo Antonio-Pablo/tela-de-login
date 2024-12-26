@@ -7,6 +7,7 @@ import {
   Alert,
 } from "react-native";
 import { useState } from "react"; // importando o useState
+import Titulo from "./components/titulo/index.js";
 const Login = () => {
   const [login, setLogin] = useState(); // criando o estado login
   const [senha, setSenha] = useState();
@@ -15,23 +16,7 @@ const Login = () => {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.textoLogin}>TELA LOGIN DO APP </Text>
-      <TextInput
-        keyboardType="email-address"
-        onChangeText={setLogin}
-        style={styles.input}
-        placeholder="Login"
-      ></TextInput>
-      <TextInput
-        
-        onChangeText={setSenha}
-        style={styles.input}
-        placeholder="Senha"
-        secureTextEntry={true}
-      ></TextInput>
-      <TouchableOpacity onPress={Logar} style={styles.botao}>
-        <Text style={styles.text}>Entrar</Text>
-      </TouchableOpacity>
+  
     </View>
   );
 };
@@ -67,7 +52,12 @@ const styles = StyleSheet.create({
   textoLogin: {
     fontSize: 24,
     color: "black",
-    marginBottom: 20,
+    marginBottom: 4,
+    fontWeight: "bold",
+  },
+  subTitulo: {
+    fontSize: 18,
+    color: "green",
     fontWeight: "bold",
   },
 });
